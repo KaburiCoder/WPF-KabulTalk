@@ -1,0 +1,7 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <Style TargetType="{x:Type Button}">
+    <Setter Property="BorderBrush" Value="LightSkyBlue"/>
+    <Setter Property="Background" Value="White"/>
+  </Style>
+</ResourceDictionary>

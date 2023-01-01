@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Controls\ChangePwdControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\LoginControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\SignupControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\TitleBar.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\MainView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\ChangePwdControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\LoginControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\SignupControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\TitleBar.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Buttons.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Colors.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\MainView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

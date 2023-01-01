@@ -1,0 +1,158 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\YoutubeLecture\\KabulTalk\\KabulTalk.csproj": {}
+  },
+  "projects": {
+    "C:\\YoutubeLecture\\KabulTalk\\KabulTalk.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\YoutubeLecture\\KabulTalk\\KabulTalk.csproj",
+        "projectName": "KabulTalk",
+        "projectPath": "C:\\YoutubeLecture\\KabulTalk\\KabulTalk.csproj",
+        "packagesPath": "C:\\Users\\RENEWCOM PC\\.nuget\\packages\\",
+        "outputPath": "C:\\YoutubeLecture\\KabulTalk\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RENEWCOM PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {
+              "C:\\YoutubeLecture\\WpfLib\\WpfLib.csproj": {
+                "projectPath": "C:\\YoutubeLecture\\WpfLib\\WpfLib.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "dependencies": {
+            "CommunityToolkit.Mvvm": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "FontAwesome6.Svg": {
+              "target": "Package",
+              "version": "[2.5.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
+            "Microsoft.Xaml.Behaviors.Wpf": {
+              "target": "Package",
+              "version": "[1.1.39, )"
+            },
+            "MySql.Data": {
+              "target": "Package",
+              "version": "[8.0.31, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\YoutubeLecture\\WpfLib\\WpfLib.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\YoutubeLecture\\WpfLib\\WpfLib.csproj",
+        "projectName": "WpfLib",
+        "projectPath": "C:\\YoutubeLecture\\WpfLib\\WpfLib.csproj",
+        "packagesPath": "C:\\Users\\RENEWCOM PC\\.nuget\\packages\\",
+        "outputPath": "C:\\YoutubeLecture\\WpfLib\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\DevExpress 22.1\\Components\\Offline Packages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\RENEWCOM PC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\DevExpress 22.1.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0-windows7.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\DevExpress 22.1\\Components\\System\\Components\\Packages": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0-windows7.0": {
+            "targetAlias": "net6.0-windows",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0-windows7.0": {
+          "targetAlias": "net6.0-windows",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            },
+            "Microsoft.WindowsDesktop.App.WPF": {
+              "privateAssets": "none"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
