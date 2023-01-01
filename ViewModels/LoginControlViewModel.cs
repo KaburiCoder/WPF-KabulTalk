@@ -12,7 +12,7 @@ namespace KabulTalk.ViewModels
   public partial class LoginControlViewModel
   {   
     [ObservableProperty]
-    private ObservableCollection<string> _emails;
+    private ObservableCollection<string>? _emails;
 
     public LoginControlViewModel()
     {

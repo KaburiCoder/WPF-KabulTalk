@@ -24,5 +24,10 @@ namespace KabulTalk.Controls
     {
       InitializeComponent();
     }
+
+    private void Button_Click(object sender, RoutedEventArgs e)
+    {
+      email.Validating = true;
+    }
   }
 }

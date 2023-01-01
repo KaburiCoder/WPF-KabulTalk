@@ -32,20 +32,12 @@
     <!--Body-->
     <StackPanel Grid.Row="1"
                 Margin="30 10">
-      <ComboBox IsEditable="True">
-        <ComboBox.Resources>
-          <Style TargetType="{x:Type TextBox}">
-            <Setter Property="BorderBrush" Value="Red"/>
-            <Setter Property="BorderThickness" Value="3"/>
-          </Style>
-        </ComboBox.Resources>
-      </ComboBox>
-      <controls:ComboBoxControl Background="White"
+      <controls:ComboBoxControl x:Name="email" Background="White"
                                 Height="35"
                                 WaterMarkText="이메일을 입력하세요."
                                 WaterMarkTextColor="Blue"
                                 IsEditable="True"
-                                BorderBrush="Red"
+                                Validating="True"
                                 ItemsSource="{Binding Emails}"/>
       <controls:PasswordBoxControl
         Background="White"
@@ -54,6 +46,7 @@
         Password="12345"
         Height="{StaticResource ElementHeight}"/>
       <Button Content="로그인" 
+              Click="Button_Click"
               Height="{StaticResource ElementHeight}"
               Margin="0 10 0 0"/>
       <!--또는 Separator-->
@@ -92,6 +85,12 @@
           <fa6:SvgAwesome Icon="Solid_Info" PrimaryColor="#FFA99900"/>
         </Button>
       </StackPanel>
+      <controls:ComboBoxControl Background="White"
+        Height="35"
+        WaterMarkText="이메일을 입력하세요."
+        WaterMarkTextColor="Blue"
+        IsEditable="True"
+        ItemsSource="{Binding Emails}"/>
     </StackPanel>
 
     <!--Bottom-->
