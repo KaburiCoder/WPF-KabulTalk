@@ -5,7 +5,7 @@ VisualStudioVersion = 17.1.32210.238
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KabulTalk", "KabulTalk.csproj", "{BC0C7181-A8E2-4DB3-AA6F-A058566B6238}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfLib", "..\WpfLib\WpfLib.csproj", "{DF90E944-E3B9-4FAC-8BC3-21F90F8AE5DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WpfLib", "..\WpfLib\WpfLib.csproj", "{DF90E944-E3B9-4FAC-8BC3-21F90F8AE5DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

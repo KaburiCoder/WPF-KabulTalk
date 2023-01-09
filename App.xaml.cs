@@ -1,4 +1,6 @@
-﻿using KabulTalk.ViewModels;
+﻿using KabulTalk.Services;
+using KabulTalk.Stores;
+using KabulTalk.ViewModels;
 using KabulTalk.Views;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -19,7 +21,7 @@ namespace KabulTalk
 
     private void App_Startup(object sender, StartupEventArgs e)
     {
-      var mainView = App.Current.Services.GetService<MainView>()!;
+      MainView? mainView = App.Current.Services.GetService<MainView>()!;
       mainView.Show();
     }
 
@@ -29,19 +31,30 @@ namespace KabulTalk
 
     private static IServiceProvider ConfigureServices()
     {
-      var services = new ServiceCollection();
+      ServiceCollection? services = new ServiceCollection();
+
+      // Stores
+      services.AddSingleton<MainNavigationStore>();
+
+      // Services
+      services.AddSingleton<INavigationService, NavigationService>();
 
       // ViewModels
       services.AddTransient<MainViewModel>();
       services.AddTransient<LoginControlViewModel>();
       services.AddTransient<SignupControlViewModel>();
       services.AddTransient<ChangePwdControlViewModel>();
+      services.AddTransient<FindAccountControlViewModel>();
+      services.AddSingleton<MainNaviControlViewModel>();
 
       // Services
       //services.AddSingleton<ITestService, TestService>();
 
       // Views
-      services.AddSingleton<MainView>();
+      services.AddSingleton(s => new MainView()
+      {
+        DataContext = s.GetRequiredService<MainViewModel>()
+      });
 
       return services.BuildServiceProvider();
     }

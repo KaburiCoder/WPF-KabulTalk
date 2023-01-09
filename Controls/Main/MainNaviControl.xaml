@@ -1,0 +1,59 @@
+﻿<UserControl x:Class="KabulTalk.Controls.MainNaviControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KabulTalk.Controls"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+  <UserControl.Resources>
+    <Style x:Key="Col0" TargetType="{x:Type ColumnDefinition}">
+      <Setter Property="Width" Value="auto"/>
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding IsFindAccountVisible}" Value="False">
+          <Setter Property="Width" Value="0"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+  </UserControl.Resources>
+  <Grid>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition x:Name="accountColumn"/>
+      <ColumnDefinition x:Name="accPwdSepColumn" Width="auto"/>
+      <ColumnDefinition x:Name="passwordColumn"/>
+      <ColumnDefinition x:Name="pwdLoginSepColumn" Width="auto"/>
+      <ColumnDefinition x:Name="LoginColumn"/>
+      <ColumnDefinition x:Name="loginSignupSepColumn" Width="auto"/>
+      <ColumnDefinition x:Name="signupColumn"/>
+    </Grid.ColumnDefinitions>
+
+    <Button Grid.Column="0"
+              Content="계정 찾기"
+              Command="{Binding NavigateFindAccountCommand}"
+              Style="{StaticResource MainBottomButton}"/>
+    <Separator Grid.Column="1" 
+                 Width="1"
+                 Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                 Margin="0 5"/>
+    <Button Grid.Column="2"
+              Content="비밀번호 재설정"
+              Command="{Binding NavigateChangePasswordCommand}"
+              Style="{StaticResource MainBottomButton}"/>
+    <Separator Grid.Column="3" 
+                 Width="1"
+                 Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                 Margin="0 5"/>
+    <Button Grid.Column="4"
+              Content="로그인화면"
+              Command="{Binding NavigateLoginCommand}"
+              Style="{StaticResource MainBottomButton}"/>
+    <Separator Grid.Column="5" 
+                 Width="1"
+                 Style="{StaticResource {x:Static ToolBar.SeparatorStyleKey}}"
+                 Margin="0 5"/>
+    <Button Grid.Column="6"
+              Content="회원가입"
+              Command="{Binding NavigateSignupCommand}"
+              Style="{StaticResource MainBottomButton}"/>
+  </Grid>
+</UserControl>

@@ -1,5 +1,4 @@
-﻿using KabulTalk.ViewModels;
-using System.Windows;
+﻿using System.Windows;
 
 namespace KabulTalk.Views
 {
@@ -11,7 +10,6 @@ namespace KabulTalk.Views
     public MainView()
     {
       InitializeComponent();
-      DataContext = App.Current.Services.GetService(typeof(MainViewModel));
     }
-  } 
+  }
 }

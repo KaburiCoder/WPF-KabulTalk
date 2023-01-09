@@ -7,13 +7,19 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Controls\ChangePwdControl.xaml.cs">
+    <Compile Update="Controls\Main\ChangePwdControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\LoginControl.xaml.cs">
+    <Compile Update="Controls\Main\FindAccountControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Controls\SignupControl.xaml.cs">
+    <Compile Update="Controls\Main\LoginControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Main\MainNaviControl.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Controls\Main\SignupControl.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Controls\TitleBar.xaml.cs">
@@ -24,13 +30,19 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="Controls\ChangePwdControl.xaml">
+    <Page Update="Controls\Main\ChangePwdControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\LoginControl.xaml">
+    <Page Update="Controls\Main\FindAccountControl.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Controls\SignupControl.xaml">
+    <Page Update="Controls\Main\LoginControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Main\MainNaviControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Controls\Main\SignupControl.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Controls\TitleBar.xaml">
@@ -43,6 +55,12 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Styles\Fonts.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\MainStyles.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Styles\Systems.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\MainView.xaml">

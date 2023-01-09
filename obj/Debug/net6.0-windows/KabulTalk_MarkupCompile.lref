@@ -1,8 +1,10 @@
-﻿C:\YoutubeLecture\KabulTalk\obj\Debug\net6.0-windows\GeneratedInternalTypeHelper.g.cs
+﻿
 FC:\YoutubeLecture\KabulTalk\App.xaml;;
-FC:\YoutubeLecture\KabulTalk\Controls\ChangePwdControl.xaml;;
-FC:\YoutubeLecture\KabulTalk\Controls\LoginControl.xaml;;
-FC:\YoutubeLecture\KabulTalk\Controls\SignupControl.xaml;;
+FC:\YoutubeLecture\KabulTalk\Controls\Main\ChangePwdControl.xaml;;
+FC:\YoutubeLecture\KabulTalk\Controls\Main\FindAccountControl.xaml;;
+FC:\YoutubeLecture\KabulTalk\Controls\Main\LoginControl.xaml;;
+FC:\YoutubeLecture\KabulTalk\Controls\Main\MainNaviControl.xaml;;
+FC:\YoutubeLecture\KabulTalk\Controls\Main\SignupControl.xaml;;
 FC:\YoutubeLecture\KabulTalk\Controls\TitleBar.xaml;;
 FC:\YoutubeLecture\KabulTalk\Views\MainView.xaml;;
 

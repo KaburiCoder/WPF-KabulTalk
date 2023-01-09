@@ -1,11 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
-using System;
-using System.Collections.Generic;
+using KabulTalk.Stores;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using WpfLib.Controls;
 
 namespace KabulTalk.ViewModels
 {
@@ -13,31 +9,26 @@ namespace KabulTalk.ViewModels
   public partial class MainViewModel
   {
     [ObservableProperty]
-    private INotifyPropertyChanged _currentViewModel;
+    private INotifyPropertyChanged _currentViewModel = default!;
 
-    [RelayCommand]
-    public void ToLogin()
+    [ObservableProperty]
+    private SlideType _slideType = default!;
+
+    private void CurrentViewModelChanged(INotifyPropertyChanged viewModel)
     {
-      CurrentViewModel = (INotifyPropertyChanged)App.Current.Services.GetService(typeof(LoginControlViewModel))!;
+      CurrentViewModel = viewModel;
     }
 
-    [RelayCommand]
-    public void ToChangePwd()
+    public MainViewModel(MainNavigationStore mainNavigationStore)
     {
-      CurrentViewModel = (INotifyPropertyChanged)App.Current.Services.GetService(typeof(ChangePwdControlViewModel))!;
+      mainNavigationStore.CurrentViewModelChanged += CurrentViewModelChanged;
+      mainNavigationStore.SlideTypeChanged += SlideTypeChanged;
+      mainNavigationStore.CurrentViewModel = (INotifyPropertyChanged)App.Current.Services.GetService(typeof(LoginControlViewModel))!;
     }
 
-    [RelayCommand]
-    public void ToSignup()
+    private void SlideTypeChanged(SlideType slideType)
     {
-      CurrentViewModel = (INotifyPropertyChanged)App.Current.Services.GetService(typeof(SignupControlViewModel))!;
+      SlideType = slideType;
     }
-
-    public MainViewModel()
-    {
-      _currentViewModel = (INotifyPropertyChanged)App.Current.Services.GetService(typeof(LoginControlViewModel))!;
-    }
-
-   
   }
 }

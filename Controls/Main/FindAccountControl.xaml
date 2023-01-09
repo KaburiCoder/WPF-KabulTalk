@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="KabulTalk.Controls.FindAccountControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:KabulTalk.Controls" xmlns:fa6="http://schemas.fontawesome.com/icons/svg" xmlns:controls="clr-namespace:WpfLib.Controls;assembly=WpfLib"
+             mc:Ignorable="d" 
+           d:DesignHeight="550" 
+             d:DesignWidth="350" 
+             Background="{StaticResource ColorPrimary}"             
+             >
+  <Grid Margin="20 40 20 20">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="1.3*"/>
+      <RowDefinition Height="3*"/>
+      <RowDefinition Height="30"/>
+    </Grid.RowDefinitions>
+
+    <!--Logo-->
+    <fa6:SvgAwesome Icon="Brands_Rocketchat" 
+                    Margin="20"
+                    PrimaryColor="{StaticResource ColorGray}"/>
+    <!--Body-->
+    <StackPanel Grid.Row="1"
+                Margin="30 10">
+      <controls:TextBoxControl 
+        x:Name="email"
+        Text="{Binding Cellphone}"
+        WaterMarkText="전화번호"
+        Background="White"
+        Height="{StaticResource MainElementHeight}"
+        Margin="0 0 0 10"
+        />
+      <Button Content="계정 찾기" 
+              Command="{Binding FindAccountCommand}"
+              Height="{StaticResource MainElementHeight}"
+              Margin="0 0 0 100"/>
+    </StackPanel>
+
+    <!--Bottom-->       
+    <local:MainNaviControl Grid.Row="2" HideButton="FindAccount"/>
+  </Grid>
+</UserControl>

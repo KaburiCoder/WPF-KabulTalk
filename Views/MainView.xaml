@@ -6,47 +6,41 @@
         xmlns:local="clr-namespace:KabulTalk.Views" 
         xmlns:controls="clr-namespace:KabulTalk.Controls"
         xmlns:vm ="clr-namespace:KabulTalk.ViewModels"
-        xmlns:ctrl="clr-namespace:KabulTalk.Controls"
+        xmlns:ctrl="clr-namespace:WpfLib.Controls;assembly=WpfLib"
         mc:Ignorable="d"        
         WindowStyle="None"
         Title="MainView" Height="550" Width="350">
   <Window.Resources>
     <DataTemplate DataType="{x:Type vm:LoginControlViewModel}">
-      <ctrl:LoginControl/>
+      <controls:LoginControl/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:ChangePwdControlViewModel}">
-      <ctrl:ChangePwdControl/>
+      <controls:ChangePwdControl/>
     </DataTemplate>
     <DataTemplate DataType="{x:Type vm:SignupControlViewModel}">
-      <ctrl:SignupControl/>
+      <controls:SignupControl/>
+    </DataTemplate>
+    <DataTemplate DataType="{x:Type vm:FindAccountControlViewModel}">
+      <controls:FindAccountControl/>
     </DataTemplate>
   </Window.Resources>
   <WindowChrome.WindowChrome>
     <WindowChrome CaptionHeight="20"
                   ResizeBorderThickness="2"/>
-   </WindowChrome.WindowChrome>
+  </WindowChrome.WindowChrome>
   <Grid>
     <Grid.RowDefinitions>
       <RowDefinition Height="auto"/>
       <RowDefinition/>
     </Grid.RowDefinitions>
-    
+
     <!--Title Bar-->
     <controls:TitleBar />
 
     <!--Body-->
-    <Grid Grid.Row="1">
-      <Grid.RowDefinitions>
-        <RowDefinition/>
-        <RowDefinition Height="20"/>
-      </Grid.RowDefinitions>
-
-      <ContentControl Content="{Binding CurrentViewModel}"/>
-      <StackPanel Grid.Row="1" Orientation="Horizontal">
-        <Button Content = "로그인" Command="{Binding ToLoginCommand}"/>
-        <Button Content = "비밀번호변경" Command="{Binding ToChangePwdCommand}"/>
-        <Button Content = "회원가입" Command="{Binding ToSignupCommand}"/>
-      </StackPanel>
-    </Grid>
+    <ctrl:ControlSlider Grid.Row="1" 
+                        ViewModel="{Binding CurrentViewModel}"
+                        SlideType="{Binding SlideType}"
+                        Duration="0:0:0.3"/>
   </Grid>
 </Window>

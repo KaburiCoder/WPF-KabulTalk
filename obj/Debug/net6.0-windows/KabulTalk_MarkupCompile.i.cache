@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\YoutubeLecture\KabulTalk\App.xaml
-81916381687
+12-1423133851
 
-15650881409
+23-1980967057
 2101092185269
-Controls\ChangePwdControl.xaml;Controls\LoginControl.xaml;Controls\SignupControl.xaml;Controls\TitleBar.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Views\MainView.xaml;
+Controls\Main\ChangePwdControl.xaml;Controls\Main\FindAccountControl.xaml;Controls\Main\LoginControl.xaml;Controls\Main\MainNaviControl.xaml;Controls\Main\SignupControl.xaml;Controls\TitleBar.xaml;Styles\Buttons.xaml;Styles\Colors.xaml;Styles\Fonts.xaml;Styles\MainStyles.xaml;Styles\Systems.xaml;Views\MainView.xaml;
 
 True
 
