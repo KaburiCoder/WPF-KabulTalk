@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "KabulTalk/1.0.0": {
         "dependencies": {
+          "CommonLib": "1.0.0",
           "CommunityToolkit.Mvvm": "8.0.0",
           "FontAwesome6.Svg": "2.5.1",
           "Microsoft.Extensions.DependencyInjection": "7.0.0",
@@ -197,6 +198,14 @@
           "System.Drawing.Common": "4.7.0"
         }
       },
+      "CommonLib/1.0.0": {
+        "dependencies": {
+          "MySql.Data": "8.0.31"
+        },
+        "runtime": {
+          "CommonLib.dll": {}
+        }
+      },
       "WpfLib/1.0.0": {
         "runtime": {
           "WpfLib.dll": {}
@@ -384,6 +393,11 @@
       "sha512": "sha512-CeWTdRNfRaSh0pm2gDTJFwVaXfTq6Xwv/sA887iwPTneW7oMtMlpvDIO+U60+3GWTB7Aom6oQwv5VZVUhQRdPQ==",
       "path": "system.windows.extensions/4.7.0",
       "hashPath": "system.windows.extensions.4.7.0.nupkg.sha512"
+    },
+    "CommonLib/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "WpfLib/1.0.0": {
       "type": "project",

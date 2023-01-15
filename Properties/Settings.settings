@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="KabulTalk.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CONNSTRING_ACCOUNT" Type="System.String" Scope="User">
+      <Value Profile="(Default)">UID=root;PWD=1234;Server=127.0.0.1;Port=3306;Database=kabultalk;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

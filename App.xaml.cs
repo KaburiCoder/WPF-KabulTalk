@@ -1,4 +1,5 @@
-﻿using KabulTalk.Services;
+﻿using KabulTalk.Repositories;
+using KabulTalk.Services;
 using KabulTalk.Stores;
 using KabulTalk.ViewModels;
 using KabulTalk.Views;
@@ -38,6 +39,9 @@ namespace KabulTalk
 
       // Services
       services.AddSingleton<INavigationService, NavigationService>();
+
+      // Repositories
+      services.AddTransient<IAccountRepository, AccountRepository>();
 
       // ViewModels
       services.AddTransient<MainViewModel>();

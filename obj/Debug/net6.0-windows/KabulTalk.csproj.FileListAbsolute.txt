@@ -56,3 +56,5 @@ C:\YoutubeLecture\KabulTalk\obj\Debug\net6.0-windows\Controls\Main\FindAccountCo
 C:\YoutubeLecture\KabulTalk\obj\Debug\net6.0-windows\Controls\Main\MainNaviControl.baml
 C:\YoutubeLecture\KabulTalk\obj\Debug\net6.0-windows\Controls\Main\SignupControl.baml
 C:\YoutubeLecture\KabulTalk\obj\Debug\net6.0-windows\Controls\Main\LoginControl.baml
+C:\YoutubeLecture\KabulTalk\bin\Debug\net6.0-windows\CommonLib.dll
+C:\YoutubeLecture\KabulTalk\bin\Debug\net6.0-windows\CommonLib.pdb

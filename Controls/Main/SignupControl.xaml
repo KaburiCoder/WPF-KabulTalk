@@ -9,6 +9,25 @@
              d:DesignWidth="350"
              Background="{StaticResource ColorPrimary}"
              >
+  <UserControl.Resources>
+    <Style x:Key="ValidationTextStyle" TargetType="{x:Type TextBlock}">
+      <Setter Property="Visibility" Value="Visible"/>
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding ValidationText}" Value="">
+          <Setter Property="Visibility" Value="Collapsed"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="EmailValidationTextStyle" TargetType="{x:Type TextBlock}">
+      <Setter Property="Visibility" Value="Visible"/>
+      <Style.Triggers>
+        <DataTrigger Binding="{Binding EmailValidationText}" Value="">
+          <Setter Property="Visibility" Value="Collapsed"/>
+        </DataTrigger>
+      </Style.Triggers>
+    </Style>
+  </UserControl.Resources>
   <Grid Margin="20 40 20 20">
     <Grid.RowDefinitions>
       <RowDefinition Height="1.3*"/>
@@ -22,29 +41,34 @@
                     PrimaryColor="{StaticResource ColorGray}"/>
     <!--Body-->
     <StackPanel Grid.Row="1"
-                Margin="30 10">
+                Margin="30 5">
       <controls:TextBoxControl 
         Text="{Binding Email}"
         WaterMarkText="이메일"
         Background="White"
         Height="{StaticResource MainElementHeight}"
-        Margin="0 0 0 10"
+        Margin="0 0 0 0"    
+        Validating="{Binding ValidatingDict[Email]}"
         />
-
+      <TextBlock Text="{Binding EmailValidationText}"
+                 Style="{StaticResource EmailValidationTextStyle}"
+                 Foreground="{Binding EmailValidationTextColor}"/>
       <controls:TextBoxControl 
-        Text="{Binding NickName}"
+        Text="{Binding Nickname, UpdateSourceTrigger=PropertyChanged}"
         WaterMarkText="닉네임"
         Background="White"
         Height="{StaticResource MainElementHeight}"
-        Margin="0 0 0 10"
+        Margin="0 5 0 0"
+        Validating="{Binding ValidatingDict[Nickname]}"
         />
 
       <controls:TextBoxControl 
         Text="{Binding CellPhone}"
         WaterMarkText="휴대전화번호"
-        Background="White"
+        Background="White" 
         Height="{StaticResource MainElementHeight}"
-        Margin="0 0 0 10"
+        Margin="0 5 0 0"
+        Validating="{Binding ValidatingDict[CellPhone]}"
         />
 
       <controls:PasswordBoxControl
@@ -52,18 +76,28 @@
         Background="White"
         WaterMarkText="비밀번호"
         Height="{StaticResource MainElementHeight}"
-        Margin="0 0 0 10"/>
+        Margin="0 5 0 0"
+        Validating="{Binding ValidatingDict[Password]}"
+        />
 
       <controls:PasswordBoxControl
         Password="{Binding PasswordConfirm}"
         Background="White"
         WaterMarkText="비밀번호 재입력"
         Height="{StaticResource MainElementHeight}"
-        Margin="0 0 0 10"/>
+        Margin="0 5 0 0"
+        Validating="{Binding ValidatingDict[PasswordConfirm]}"
+        />
+
+      <TextBlock Text="{Binding ValidationText}"
+                 Style="{StaticResource ValidationTextStyle}"
+                 Foreground="Red"
+                 Margin="0 5 0 0"/>
+      
       <Button Content="회원가입" 
-              Command="{Binding SingupCommand}"
+              Command="{Binding SignupCommand}"
               Height="{StaticResource MainElementHeight}"
-              Margin="0 0 0 100"/>       
+              Margin="0 5 0 100"/>       
     </StackPanel>
 
     <!--Bottom-->        

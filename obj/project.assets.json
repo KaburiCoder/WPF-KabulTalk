@@ -345,6 +345,19 @@
           }
         }
       },
+      "CommonLib/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "MySql.Data": "8.0.31"
+        },
+        "compile": {
+          "bin/placeholder/CommonLib.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CommonLib.dll": {}
+        }
+      },
       "WpfLib/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -1098,6 +1111,11 @@
         "version.txt"
       ]
     },
+    "CommonLib/1.0.0": {
+      "type": "project",
+      "path": "../CommonLib/CommonLib.csproj",
+      "msbuildProject": "../CommonLib/CommonLib.csproj"
+    },
     "WpfLib/1.0.0": {
       "type": "project",
       "path": "../WpfLib/WpfLib.csproj",
@@ -1106,6 +1124,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "CommonLib >= 1.0.0",
       "CommunityToolkit.Mvvm >= 8.0.0",
       "FontAwesome6.Svg >= 2.5.1",
       "Microsoft.Extensions.DependencyInjection >= 7.0.0",
@@ -1147,6 +1166,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+            "C:\\YoutubeLecture\\CommonLib\\CommonLib.csproj": {
+              "projectPath": "C:\\YoutubeLecture\\CommonLib\\CommonLib.csproj"
+            },
             "C:\\YoutubeLecture\\WpfLib\\WpfLib.csproj": {
               "projectPath": "C:\\YoutubeLecture\\WpfLib\\WpfLib.csproj"
             }
